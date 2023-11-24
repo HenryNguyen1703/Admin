@@ -1,0 +1,143 @@
+.modal {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0 ,0, 0.6);
+}
+
+.modal__inner {
+    width: 400px;
+    position: relative;
+    background: white;
+    top: 30%;
+    left: 30%;
+    border-radius: 5px;
+    padding-top: 6px;
+    padding-bottom: 25px;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    animation: modalShow 0.3s linear;
+}
+
+.modal__header {
+    position: relative;
+    margin-bottom: 21px;
+}
+
+.modal__header i {
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 7px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.modal__header i:hover {
+    opacity: 0.8;
+}
+
+.modal__header i:active {
+    opacity: 0.4;
+}
+
+.modal__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.modal__body p {
+    font-size: 13px;
+    color:  gray;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.modal__body input {
+    width: 215px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 7px 0;
+    text-align: center;
+    border: 2px solid black;
+    outline: none;
+}
+
+.modal__body a {
+    font-size: 13px;
+    color: gray;
+    margin: 4px 0;
+    transition: 0.25s;
+}
+
+.modal__body a:hover {
+    color: var(--primary-color-black);
+}
+
+.modal__body a:active {
+    opacity: 0.4;
+}
+
+.modal__body button {
+    width: 80px;
+    height: 35px;
+    border-radius: 17px;
+    margin: 7px;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.modal__body button:hover {
+    background: var(--primary-color-black);
+    color: var(--primary-color-white);
+    transform: scale(1.2);
+}
+
+.modal__body button:active {
+    opacity: 0.4;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__footer .fa-brands {
+    font-size: 20px;
+    margin: 4px 12px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.modal__footer .fa-brands:hover {
+    color: var(--primary-color-black);
+    overflow: hidden;
+}
+
+.modal__footer .fa-brands:active {
+    opacity: 0.4;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes modalShow {
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+
+    to {
+        top: 30%;
+        opacity: 1;
+    }
+}
+

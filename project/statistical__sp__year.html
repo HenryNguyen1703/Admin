@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/statistical.css">
+        <title>Statistical</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <div class="header__statistical">
+            <header>
+                <div class="left__section">
+                    <a href="main.html">
+                        <img src="images/Main/Nike-logo-removebg-preview.png" alt="Nike-logo">
+                    </a>
+                </div>
+                
+                <div class="center__section">
+                    <div class="container__icon__search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input type="search" placeholder="Search product">
+                </div>
+
+                <div class="right__section">
+                    <p>Sign out</p>
+                </div>
+            </header>
+
+            <div class="container__sidebar__main__statistical">
+                <!-- nav -->
+                <nav>
+                    <a href="product.html" class="container__nav">
+                        <p>Product</p>
+                    </a>
+                    <a href="admin.html" class="container__nav">
+                        <p>Admin</p>
+                    </a>
+                    <a href="order.html" class="container__nav">
+                        <p>Order</p>
+                    </a>
+                    <div  class="container__nav position">
+                        <p>Statistical</p>
+                    </div>
+                </nav>
+                <!-- Main -->
+                <main>
+                    <div class="Revenue__Select">
+                        <h1>Revenue</h1>
+                        <select id="mySelect__Revenue" onchange="redirect__Revenue()">
+                            <option value="statistical.html">Week</option>
+                            <option value="Month">Month</option>
+                            <option value="statistical__Revenue__year.html">Year</option>
+                        </select>
+                    </div>
+
+                    <div class="Revenue__Chart">
+                        <div class="left__section">
+                            <div class="container">
+                                <p class="title">Total Revenue</p>
+                                <p class="result">30,200,717,175,000</p>
+                            </div>
+                            <div class="container">
+                                <p class="title">Revenue by month</p>
+                                <p class="result">280,175,000</p>
+                            </div>
+                            <div class="container">
+                                <p class="title">Total Order</p>
+                                <p class="result">5,551,120</p>
+                            </div>
+                            <div class="container">
+                                <p class="title">Order by month</p>
+                                <p class="result">22,112</p>
+                            </div>
+                        </div>
+                        <div class="right__section">
+                            <div class="container">
+                                <div class="chart">
+                                    <canvas id="linechart__Revenue__month"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sp__Select">
+                        <h1>Numbers of Jordan sold</h1>
+                        <select id="mySelect__sp" onchange="redirect__sp()">
+                            <option value="statistical__sp__week.html">Week</option>
+                            <option value="statistical__sp__month.html">Month</option>
+                            <option>Year</option>
+                        </select>
+                    </div>
+
+                    <div class="sp__Chart">
+                        <div class="container">
+                            <div class="chart">
+                                <canvas id="barchart__sp__year"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+        <script>
+            let ctx__Revenue__month = document.getElementById('linechart__Revenue__month').getContext('2d');
+            new Chart(ctx__Revenue__month, {
+                type: 'line',
+                data: {
+                    labels: ['1-7', '8-14', '15-21', '22-30'],
+                    datasets: [{
+                        label: 'Revenue',
+                        data: [1102500000,1687000000,2576000000,2051500000],
+                        pointBorderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)'
+                        ],
+                        pointRadius: 10,
+                        borderWidth: 4,  
+                        borderColor: 'rgba(112, 255, 152, 0.5)',
+                        tension: 0.5, 
+                    }]
+                },
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Revenue by Week',
+                            font: {
+                                size: 30
+                            }
+                        },
+                        legend: {
+                            display: false
+                        },
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            // sp by Year
+            let ctx = document.getElementById('barchart__sp__year').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Quantity',
+                        data: [3150, 4826, 7365, 3547, 5892, 8711, 6243, 9148, 4210, 7532, 2964, 6758],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(201, 36, 89, 0.2)',
+                            'rgba(40, 120, 175, 0.2)',
+                            'rgba(240, 183, 63, 0.2)',
+                            'rgba(110, 220, 220, 0.2)',
+                            'rgba(170, 85, 255, 0.2)',
+                            'rgba(255, 120, 0, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(201, 36, 89, 1)',
+                            'rgba(40, 120, 175,1)',
+                            'rgba(240, 183, 63,1)',
+                            'rgba(110, 220, 220,1)',
+                            'rgba(170, 85, 255,1)',
+                            'rgba(255, 120, 0,1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 25
+                    }]
+                },
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Numbers of Jordan sold by Month',
+                            font: {
+                                size: 30
+                            }
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        <script>
+            document.getElementById("mySelect__Revenue").value = "Month";
+            document.getElementById("mySelect__sp").value = "Year";
+        </script>
+        <script>
+            function redirect__Revenue() {
+                var selectedValue__Revenue = document.getElementById("mySelect__Revenue").value;
+                
+                if (selectedValue__Revenue) {
+                window.location.href = selectedValue__Revenue;
+                }
+            }
+
+            function redirect__sp() {
+                var selectedValue__sp = document.getElementById("mySelect__sp").value;
+                
+                if (selectedValue__sp) {
+                window.location.href = selectedValue__sp;
+                }
+            }
+        </script>
+    </body>
+</html>

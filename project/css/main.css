@@ -1,0 +1,40 @@
+.product-picture {
+    width: 100%;
+}
+
+.grid-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 34px; 
+}
+
+.name-product {
+    font-size: 18px;
+    color: black;
+    margin-top: 7px;
+    margin-bottom: 9px;
+}
+
+.type-of-shoes {
+    font-size: 16px;
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.number-of-color {
+    color: gray;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.price {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.icon-VND {
+    text-decoration: underline;
+}

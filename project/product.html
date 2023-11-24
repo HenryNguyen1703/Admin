@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/product.css">
+    </head>
+    <body>
+        <!-- Alter Product -->
+        <div class="modal__alter__Product hide">
+            <div class="modal__inner__alter__Product">
+                <div class="modal__header__alter__Product">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="modal__body__alter__Product">
+                    <div class="container">
+                      <p class="column__name">Product code:</p>
+                      <p class="information">PD-001</p>
+                    </div>
+    
+                    <div class="container">
+                      <p class="column__name">Image:</p>
+                      <input type="file" class="choose__picture" accept="image/*">
+                    </div>
+    
+                    <div class="container">
+                      <p class="column__name">Name:</p>
+                      <input type="text" class="input__text input__text__1 " placeholder="Name ">
+                    </div>
+    
+                    <div class="container">
+                      <p class="column__name">Price:</p>
+                      <input type="text" class="input__text input__text__2 " placeholder="Price ">
+                    </div>
+                </div>
+                <div class="modal__footer__alter__Product">
+                    <button class="btn__confirm__alter__Product" onclick="
+                            alert('Change information successfully');
+                        ">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Product -->
+        <div class="modal__delete__Product hide">
+            <div class="modal__inner__delete__Product">
+                <div class="modal__header__delete__Product">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="modal__body__delete__Product">
+                    <p>Do you want to delete this Product ?</p>
+                </div>
+                <div class="modal__footer__delete__Product">
+                    <button class="btn__confirm__delete__Product" onclick="
+                            alert('Delete product successfully');
+                        ">Confirm</button>
+                    <button class="btn__close__delete__Product">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="header__product">
+            <header>
+                <div class="left__section">
+                    <a href="main.html">
+                        <img src="images/Main/Nike-logo-removebg-preview.png" alt="Nike-logo">
+                    </a>
+                </div>
+                
+                <div class="center__section">
+                    <div class="container__icon__search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input type="search" placeholder="Search product">
+                </div>
+
+                <div class="right__section">
+                    <p>Sign out</p>
+                </div>
+            </header>
+        </div>
+
+        <!-- sidebar main section -->
+        <div class="container__sidebar__main__section__product">
+            <!-- nav -->
+            <nav>
+                <div class="container__nav position">
+                    <p>Product</p>
+                </div>
+                <a href="admin.html" class="container__nav">
+                    <p>Admin</p>
+                </a>
+                <a href="order.html" class="container__nav">
+                    <p>Order</p>
+                </a>
+                <a href="statistical.html" class="container__nav">
+                    <p>Statistics</p>
+                </a>
+            </nav>
+
+            <!-- Main -->
+            <main>
+                <div class="grid__product">
+                    <!-- Product code -->
+                    <div class="column__container">
+                        <div class="column__name">
+                            <p>Product code</p>
+                        </div>
+                        <div class="information">
+                            <p>PD-001</p>
+                        </div>
+                        <div class="information">
+                            <p>PD-002</p>
+                        </div>
+                        <div class="information">
+                            <p>PD-003</p>
+                        </div>
+                        <div class="information">
+                            <p>PD-004</p>
+                        </div>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="column__container">
+                        <div class="column__name">
+                            <p>Image</p>
+                        </div>
+                        <div class="information">
+                            <img src="images/Men/Men Shoes/Jordan Retro 6G.webp" alt="Jordan Retro 6G">
+                        </div>
+                        <div class="information">
+                            <img src="images/Men/Men Shoes/Nike Full Force Low.webp" alt="Nike Full Force Low">
+                        </div>
+                        <div class="information">
+                            <img src="images/Men/Men Shoes/Air Jordan 1 Low SE.webp" alt="Air Jordan 1 Low SE">
+                        </div>
+                        <div class="information">
+                            <img src="images/Men/Men Shoes/Nike Dunk Low.webp" alt="Nike Dunk Low">
+                        </div>
+                    </div>
+
+                    <!-- Product name -->
+                    <div class="column__container">
+                        <div class="column__name">
+                            <p>Name</p>
+                        </div>
+                        <div class="information">
+                            <p>Jordan Retro 6G</p>
+                        </div>
+                        <div class="information">
+                            <p>Nike Full Force Low</p>
+                        </div>
+                        <div class="information">
+                            <p>Air Jordan 1 Low SE</p>
+                        </div>
+                        <div class="information">
+                            <p>Nike Dunk Low</p>
+                        </div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="column__container">
+                        <div class="column__name">
+                            <p>Price</p>
+                        </div>
+                        <div class="information">
+                            <p>6,459,000<span>đ</span></p>
+                        </div>
+                        <div class="information">
+                            <p>2,649,000<span>đ</span></p>
+                        </div>
+                        <div class="information">
+                            <p>3,669,000<span>đ</span></p>
+                        </div>
+                        <div class="information">
+                            <p>2,929,000<span>đ</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Action -->
+                    <div class="column__container">
+                        <div class="column__name">
+                            <p>Action</p>
+                        </div>
+                        <div class="information">
+                            <i class="fa-solid fa-pen pen__1"></i>
+                            <i class="fa-solid fa-trash trash__1"></i>
+                        </div>
+                        <div class="information">
+                            <i class="fa-solid fa-pen pen__2"></i>
+                            <i class="fa-solid fa-trash trash__2"></i>
+                        </div>
+                        <div class="information">
+                            <i class="fa-solid fa-pen pen__3"></i>
+                            <i class="fa-solid fa-trash trash__3"></i>
+                        </div>
+                        <div class="information">
+                            <i class="fa-solid fa-pen pen__4"></i>
+                            <i class="fa-solid fa-trash trash__4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page__number">
+                    <span>1</span>
+                </div>
+            </main>
+
+            <section>
+                <h2>Add Product</h2>
+                <p>Product code</p>
+                <input type="text" placeholder="Product code">
+                <p>Name</p>
+                <input type="text" placeholder="Product name">
+                <p>Price</p>
+                <input type="text" placeholder="Product Price">
+                <p>Image</p>
+                <input type="file" accept="image/*">
+                <button  onclick="
+                    alert('Add product successfully');
+                "
+                >Submit</button>
+            </section>
+        </div>  
+        <script src="js/product.js"></script>
+    </body>
+</html>

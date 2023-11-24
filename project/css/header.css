@@ -1,0 +1,192 @@
+                            /* Header */
+
+/* First Header */
+
+.first__header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.first__header .left__section {
+    width: 80px;
+    height: 100%;
+}
+
+.first__header .left__section img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.first__header .left__section img:hover{
+    opacity: 0.6;
+}
+
+.first__header .left__section img:active{
+    opacity: 0.3;
+}
+
+.first__header .right__section button {
+    width: 100px;
+    height: 35px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.first__header .right__section .btn__SignUp {
+    background-color: var(--primary-color-black);
+    color: var(--primary-color-white);
+}
+
+.first__header .right__section .btn__SignIn {
+    color: var(--primary-color-black);
+    margin-left: 10px;
+}
+
+.first__header .right__section button:hover {
+    transform: scale(0.9);
+}
+
+.first__header .right__section button:active {
+    opacity: 0.7;
+}
+
+
+/* Second header */
+
+.second__header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: var(--primary-color-gray);
+}
+
+.second__header .left__section {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: 1050px;
+    align-items: center;
+    margin-left: -25px;
+}
+
+.second__header .left__section .container__icon__search {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translate(43px, 0);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.second__header .left__section .container__icon__search:hover {
+    background: rgba(0, 0, 0, 0.09)
+}
+
+.second__header .left__section i {
+    font-size: 20px;
+}
+
+.second__header .left__section input {
+    flex: 1;
+    width: 0;
+    height: 45px;
+    border: none;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    outline: none;
+    padding-left: 50px;
+    padding-right: 20px;
+    border-radius: 40px;
+    color: var(--primary-color-black);
+    font-size: 18px;
+}
+
+.second__header .left__section a {
+    text-decoration: none;
+    color: var(--primary-color-black)
+}
+
+.second__header .right__section {
+    margin-left: 20px;
+}
+
+.second__header .right__section i {
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.second__header .right__section i:hover {
+    opacity: 0.5;
+}
+
+/* Third header */
+.third__header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third__header a {
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 20px;
+    color: var(--primary-color-black);
+    transition: 0.1s;
+}
+
+.third__header a:hover {
+    border-bottom: 2px solid var(--primary-color-black);
+}
+
+.third__header span {
+    color: gray;
+}
+
+/* Fourth header */
+.fourth__header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--primary-color-gray);
+}
+
+.fourth__header .content {
+    font-size: 12px;
+}
+
+.fourth__header p span {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.25s;
+}
+
+.fourth__header p span:active {
+    color: var(--primary-color-gray);
+}

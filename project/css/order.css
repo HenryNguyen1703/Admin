@@ -189,10 +189,6 @@
     transition: 0.4s;
 }
 
-.container__sidebar__main__order main .flex__order .information:hover {
-    transform: translateX(10px);
-}
-
 .container__sidebar__main__order main .flex__order .information .container{
     display: flex;
     align-items: center;

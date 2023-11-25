@@ -10,8 +10,8 @@
     width: 400px;
     position: relative;
     background: white;
-    top: 30%;
-    left: 30%;
+    top: 20%;
+    left: 35%;
     border-radius: 5px;
     padding-top: 6px;
     padding-bottom: 25px;
@@ -117,6 +117,7 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
     transition: 0.25s;
     cursor: pointer;
+    font-size: 17px;
 }
 
 .modal__footer__Signup button:hover {
@@ -138,7 +139,7 @@
     }
 
     to {
-        top: 30%;
+        top: 20%;
         opacity: 1;
     }
 }

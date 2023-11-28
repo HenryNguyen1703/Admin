@@ -209,6 +209,7 @@
     opacity: 0.4;
 }
 
+
 .container__sidebar__main__statistical main .body__main__flex .column__name {
     display: grid;
     grid-template-columns: 0.7fr 1fr 0.7fr 1.2fr 0.7fr 0.5fr;
@@ -252,4 +253,8 @@
     background: var(--primary-color-gray);
     cursor: pointer;
     transition: 0.25s;
+}
+
+.hide {
+    visibility: hidden;
 }

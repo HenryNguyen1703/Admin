@@ -21,3 +21,13 @@ modal__detail__Order.addEventListener('click',function(e){
         toggleModalDetailOrder();
     }
 });
+
+//                              Find order
+var container__information = document.querySelector('.container__information');
+var btn__find = document.querySelector('.btn__find');
+
+function findOrder () {
+    container__information.classList.toggle('hide');
+}
+
+btn__find.addEventListener('click',findOrder);
